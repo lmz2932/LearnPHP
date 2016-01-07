@@ -1,4 +1,4 @@
 <?php
     # Standard PHP tag
-    echo "Success!";
+    echo "XML style tag";
 ?>
