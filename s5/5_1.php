@@ -42,7 +42,29 @@
     echo substr($test,0, 32) . "...<br />";
 
     # mb_strlen\mb_substr
-    #
     $str = "每个中文的utf-8编码占3个字节，处理中文时需要使用mb_strlen和mb_substr";
     echo mb_strlen($str) . "<br />";
     echo mb_substr($str, 0, 20) . "<br />";
+
+    # strcmp\strcasecmp\strnatcmp\strnatcasecmp
+    $a = 'abc';
+    $b = 'ABc';
+    echo strcmp($a, $b) . "<br />";
+    echo strcasecmp($a, $b) . "<br />"; #不区分大小写
+
+    $c = '2';
+    $d = '10';
+    echo strnatcmp($c, $d) . "<br />"; #自然排序，数字字符串按照数字大小排序
+    $e = '2f';
+    $f = '2F';
+    echo strnatcasecmp($e, $f) . "<br />";
+
+    # strncmp
+    $a = 'abc123';
+    $b = 'abc234';
+    echo strncmp($a, $b, 4) . "<br />";
+
+    # strstr
+    $a = 'This is a test.';
+    $b = 'is';
+    echo strstr($a, $b) . "<br />";
