@@ -64,7 +64,24 @@
     $b = 'abc234';
     echo strncmp($a, $b, 4) . "<br />";
 
-    # strstr
+    # strstr\strstr_count\strchr
     $a = 'This is a test.';
-    $b = 'is';
+    $b = 'i';
     echo strstr($a, $b) . "<br />";
+    echo strchr($a, $b) . "<br />"; #strchr函数的别名是strstr
+    echo substr_count($a, $b) . "<br />";
+
+    # str_ireplace\str_replace
+    $a = 'You SOSo.';
+    $b = 'o';
+    $c = 'i';
+    $d = 0;
+    echo str_ireplace($b, $c, $a) . '<br />';
+    echo str_ireplace($b, $c, $a, $d) . '<br />';
+    echo "替换了" . $d . "次<br />";
+    echo str_replace($b, $c, $a) . '<br />';
+    echo str_replace($b, $c, $a, $d) . '<br />';
+    echo "替换了" . $d . "次<br />";
+
+    # substr_replace
+    
