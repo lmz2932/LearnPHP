@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>6_3</title>
+        <meta charset="utf-8" />
+        <script src="./js/check.js"></script>
+    </head>
+    <body>
+        <form method="post" action="6_3.php" onSubmit="return chkreg(1)">
+            <div>
+                <label for="postalcode">邮政编码：</label>
+                <input type="text" name="postalcode" id="postalcode" size="20" onBlur="chkreg(2)" />
+                <span id="check_postalcode" style="color:#F1B000"> </span>
+            </div>
+            <div>
+                <label for="email">邮箱：</label>
+                <input type="text" name="email" id="email" size="20" onBlur="chkreg(3)" />
+                <span id="check_email" style="color:#F1B000"> </span>
+            </div>
+            <div>
+                <label for="gtel">固定电话：</label>
+                <input type="text" name="gtel" id="gtel" size="20" onBlur="chkreg(4)" />
+                <span id="check_gtel" style="color:#F1B000"> </span>
+            </div>
+            <div>
+                <label for="mtel">移动电话：</label>
+                <input type="text" name="mtel" id="mtel" size="20" onBlur="chkreg(5)" />
+                <span id="check_mtel" style="color:#F1B000"> </span>
+            </div>
+            <div>
+                <input type="submit" value="提交" />
+                <input type="reset" value="重置" />
+            </div>
+        </form>
+    </body>
+</html>

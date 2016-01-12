@@ -1,4 +1,5 @@
 <?php
+    header('content-type:text/html; charset=utf-8;');
     # PCRE函数比POSIX函数执行效率快一些
     # PCRE正则表达式要用//括起来
 
@@ -36,7 +37,13 @@
     var_dump(preg_replace($pattern, 'sdt', $original, 1)); #string(24) "This sdt is realy a sd."
     echo "<br />";
 
-    # 
+    # preg_replace_callback
+    function f($str){
+        $str = "<font color=$str[1]>$str[2]</font>";
+        return $str;
+    }
+    $string = '[color=blue]蓝色[/color]';
+    echo preg_replace_callback('/\[color=(.*)\](.*)\[\/color\]/U', "f", $string) . "<br />";
 
     # preg_split
     $pattern = '/is/';
